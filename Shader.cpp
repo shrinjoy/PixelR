@@ -13,7 +13,7 @@ unsigned int  Shader::CreateShader(std::string pathto_vertexshader, std::string 
 	if (!success)
 	{
 		glGetShaderInfoLog(vertexshader, 512, NULL, info);
-		std::cout << "failed" << info << std::endl;
+		std::cout << "failed vert" << info << std::endl;
 	}
 	unsigned int fragmentshader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentshader, 1, &fragmentshaderdata, NULL);
@@ -22,13 +22,14 @@ unsigned int  Shader::CreateShader(std::string pathto_vertexshader, std::string 
 	if (!success)
 	{
 		glGetShaderInfoLog(fragmentshader, 512, NULL, info);
-		std::cout << "failed" << info << std::endl;
+		std::cout << "failed frag" << info << std::endl;
 	}
 	unsigned int shaderid=glCreateProgram();
 	glAttachShader(shaderid, vertexshader);
 	glAttachShader(shaderid, fragmentshader);
 	glLinkProgram(shaderid);
 	glDeleteShader(vertexshader);
-	glDeleteShader(fragmentshader);
+	glDeleteShader(fragmentshader); std::cout << "no shader error" << std::endl;
+
 	return shaderid;
 }

@@ -6,7 +6,7 @@
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
-#include "stb_image.h"
+
 #include <fstream>
 const unsigned int SCREEN_WIDTH = 600;
 const unsigned int SCREEN_HEIGHT= 600;
@@ -41,6 +41,9 @@ public:
 };
 static class Texture2D
 {
-	void load();
+	 
+	public:
+		
+		 static unsigned int loadtexture(std::string texturepath);
 };
 
