@@ -1,0 +1,2 @@
+C:\PixelRenderer\PixelR\x64\Debug\PixelR.exe
+C:\PixelRenderer\PixelR\x64\Debug\PixelR.pdb
