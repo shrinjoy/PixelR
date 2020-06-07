@@ -41,6 +41,6 @@ public:
 };
 static class Texture2D
 {
-	
+	void load();
 };
 
