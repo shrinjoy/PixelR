@@ -58,5 +58,5 @@ class Sprite2D
 		Pvector3f Position = {1.0f,1.0f,0.0f};
 		Pvector3f Scale = {1.0f,1.0f,0.0f};
 		Pvector3f color={1.0f,1.0f,1.0f};
-	void Draw(unsigned int shaderid,float frame_w, float frame_h, float txw, float txh);
+	void Draw(unsigned int shaderid,float frame_w, float frame_h, float txw, float txh, int row, int col);
 };

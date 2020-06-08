@@ -11,7 +11,7 @@ int main()
     
 	Texture2D tx;tx.loadtexture("C:\\PixelRenderer\\res\\male.png");
  
-   float x = 0;
+   int x = 0;
    Sprite2D sprite;
    sprite.Scale = { 0.32f,0.32f,0.0f };
    sprite.Position = { -0.5f,0.0f,0.0f };
@@ -25,7 +25,7 @@ int main()
 
 	while (!glfwWindowShouldClose(pixelGamewindow.GameWindow))
 	{
-		x = x + 0.01f;
+		x = x + 1;
 		
 		
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -35,8 +35,8 @@ int main()
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glEnable(GL_BLEND);
 	
-		sprite.Draw(testshader,30.0f,30.0f,tx.w,tx.h);
-		sprite1.Draw(testshader, 30.0f, 30.0f, tx.w, tx.h);
+		sprite.Draw(testshader,32,32,tx.w,tx.h,x,2);
+		
 		glfwSwapBuffers(pixelGamewindow.GameWindow);
 		glfwPollEvents();
 	}

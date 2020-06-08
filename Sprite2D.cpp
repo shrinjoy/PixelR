@@ -1,11 +1,11 @@
 #include "PixelR.h"
-void Sprite2D::Draw(unsigned int shaderid,float frame_w,float frame_h,float txw,float txh)
+void Sprite2D::Draw(unsigned int shaderid,float frame_w,float frame_h,float txw,float txh,int col,int row)
 {
 	x = x + 0.01f;
 	unsigned int txlocc = glGetUniformLocation(shaderid, "tx_cord");
 	glm::mat4 txtran = glm::mat4(1.0f);
-	txtran = glm::scale(txtran, glm::vec3(frame_w/txw, frame_h / txh, 0.0f));
-	txtran = glm::translate(txtran, glm::vec3(0.0f, 0.0f, 0.0f));
+	txtran = glm::scale(txtran, glm::vec3(frame_w/txw,frame_h/txh, 0.0f));
+	txtran = glm::translate(txtran, glm::vec3(frame_w*col,(row*frame_h)/frame_h,32));
 	glUniformMatrix4fv(txlocc, 1, GL_FALSE, glm::value_ptr(txtran));
 
 	transformloc = glGetUniformLocation(shaderid,"transform");//mat4
