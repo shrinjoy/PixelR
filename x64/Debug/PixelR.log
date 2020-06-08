@@ -11,6 +11,8 @@ C:\PixelRenderer\PixelR\PixelR.h(37,2): warning C4091: 'static ': ignored on lef
 C:\PixelRenderer\PixelR\PixelR.h(42,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
 C:\PixelRenderer\PixelR\PixelRmain.cpp(38,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\PixelRenderer\PixelR\PixelRmain.cpp(38,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\PixelRenderer\PixelR\PixelRmain.cpp(39,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\PixelRenderer\PixelR\PixelRmain.cpp(39,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Sprite2D.cpp
 C:\PixelRenderer\Libs\Opengl\glad\include\glad\glad.h(326,1): warning C4005: 'GL_ALL_ATTRIB_BITS': macro redefinition
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\GL\gl.h(107): message : see previous definition of 'GL_ALL_ATTRIB_BITS'

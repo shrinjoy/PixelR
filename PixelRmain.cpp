@@ -35,8 +35,8 @@ int main()
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glEnable(GL_BLEND);
 	
-		sprite.Draw(testshader,32,32,tx.w,tx.h,x,2);
-		
+		sprite.Draw(testshader,32,32,tx.w,tx.h,x,3);
+		sprite1.Draw(testshader, 32, 32, tx.w, tx.h, x, 1);
 		glfwSwapBuffers(pixelGamewindow.GameWindow);
 		glfwPollEvents();
 	}

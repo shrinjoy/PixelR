@@ -52,7 +52,7 @@ class Sprite2D
 {
 	unsigned int transformloc;
 	unsigned int colorloc;
-	float x = 0;
+	
 	public:
 		
 		Pvector3f Position = {1.0f,1.0f,0.0f};
