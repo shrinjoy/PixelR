@@ -22,6 +22,7 @@ struct Pvector3f
 {
 	float x; float y; float z;
 };
+
 class Shapes
 {
 	
@@ -39,11 +40,23 @@ static class Shader
 public:
 	unsigned static int CreateShader(std::string pathto_vertexshader, std::string pathto_fragmentshader);
 };
-static class Texture2D
+ class Texture2D
 {
 	 
 	public:
-		
-		 static unsigned int loadtexture(std::string texturepath);
+		unsigned int textureid;
+		int w, h, n;
+		void loadtexture(std::string texturepath);
 };
-
+class Sprite2D
+{
+	unsigned int transformloc;
+	unsigned int colorloc;
+	float x = 0;
+	public:
+		
+		Pvector3f Position = {1.0f,1.0f,0.0f};
+		Pvector3f Scale = {1.0f,1.0f,0.0f};
+		Pvector3f color={1.0f,1.0f,1.0f};
+	void Draw(unsigned int shaderid,float frame_w, float frame_h, float txw, float txh);
+};

@@ -148,6 +148,7 @@
     <ClCompile Include="PixelWindow.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Shapes.cpp" />
+    <ClCompile Include="Sprite2D.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>

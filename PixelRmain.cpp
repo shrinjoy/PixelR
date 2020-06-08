@@ -8,17 +8,35 @@ int main()
 	Shapes rect;
 	rect.Rect2D();
 	unsigned int testshader = Shader::CreateShader("C:\\PixelRenderer\\Shaders\\defaultvertexshader.txt", "C:\\PixelRenderer\\Shaders\\defaultfragmentshader.txt");
-	unsigned int texturetest = Texture2D::loadtexture("C:\\PixelRenderer\\res\\images.jpg");
+    
+	Texture2D tx;tx.loadtexture("C:\\PixelRenderer\\res\\male.png");
+ 
+   float x = 0;
+   Sprite2D sprite;
+   sprite.Scale = { 0.32f,0.32f,0.0f };
+   sprite.Position = { -0.5f,0.0f,0.0f };
+   Sprite2D sprite1;
+   sprite1.Scale = { 0.5f,0.5f,0.0f };
+   sprite1.Position = { -1.0f,0.0f,0.0f };
+   sprite1.color = { 1.0f,0.0f,0.0f };
 	//game loop
+  
+   
+
 	while (!glfwWindowShouldClose(pixelGamewindow.GameWindow))
 	{
+		x = x + 0.01f;
+		
+		
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		glBindTexture(GL_TEXTURE_2D, texturetest);
+		glBindTexture(GL_TEXTURE_2D, tx.textureid);
 		glUseProgram(testshader);
-		
-		glBindVertexArray(rect.VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glEnable(GL_BLEND);
+	
+		sprite.Draw(testshader,30.0f,30.0f,tx.w,tx.h);
+		sprite1.Draw(testshader, 30.0f, 30.0f, tx.w, tx.h);
 		glfwSwapBuffers(pixelGamewindow.GameWindow);
 		glfwPollEvents();
 	}
