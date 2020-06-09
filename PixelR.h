@@ -6,12 +6,14 @@
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
-
+#include <chrono>
+#include <thread>
 #include <fstream>
-const unsigned int SCREEN_WIDTH = 600;
-const unsigned int SCREEN_HEIGHT= 600;
+const unsigned int SCREEN_WIDTH = 900;
+const unsigned int SCREEN_HEIGHT= 900;
 const std::string TITLE="PixelHeros";
 void OnWindowResize(GLFWwindow* window, int width, int height);//impliment this and assing to framzebuffersizechangecallback
+
 class PixelWindow
 {
 public:
@@ -50,13 +52,18 @@ public:
 };
 class Sprite2D
 {
-	unsigned int transformloc;
-	unsigned int colorloc;
-	
+	unsigned int transformloc;//shader transform variable location mat4 need for scaleing and moving sprite arnd
+	unsigned int colorloc;//shader color variable location vec3 need for color
+	unsigned int txlocc;//shader texture offset mat4 location need for sprite animation
+	glm::mat4 txtran;
+	glm::mat4 trans;
 	public:
-		
+		//default values
+		bool dataupdated = true;
 		Pvector3f Position = {1.0f,1.0f,0.0f};
 		Pvector3f Scale = {1.0f,1.0f,0.0f};
 		Pvector3f color={1.0f,1.0f,1.0f};
-	void Draw(unsigned int shaderid,float frame_w, float frame_h, float txw, float txh, int row, int col);
+	void init(unsigned int shaderid);
+	void Update(float frame_w, float frame_h, float txw, float txh, int col, int row);
+	void Draw();//draws shit
 };
