@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Libs\Opengl\glad\src\glad.c" />
+    <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="PixelRmain.cpp" />
     <ClCompile Include="PixelWindow.cpp" />
     <ClCompile Include="Shader.cpp" />

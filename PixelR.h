@@ -32,6 +32,22 @@ class Shapes
 	unsigned int VBO, VAO;
 	void Rect2D();
 };
+class Camera2D
+{
+	//type 1 = projection 0 = orthographic
+	glm::mat4 projection;
+	glm::mat4 view;
+	unsigned int projection_shader_location;
+	unsigned int view_shader_location;
+	unsigned int enablecamera;
+	public:
+	glm::vec3 camera_position = {0,0,0.0f};
+	float camera_near_clip = 0.1f;
+	float camera_far_clip = 100.0f;
+	void init(unsigned int shaderid,float screen_width,float screen_height,float fov=45.0f);
+	void Update();
+};
+
 static class Utility
 {
 public:
@@ -64,6 +80,7 @@ class Sprite2D
 		Pvector3f Scale = {1.0f,1.0f,0.0f};
 		Pvector3f color={1.0f,1.0f,1.0f};
 	void init(unsigned int shaderid);
-	void Update(float frame_w, float frame_h, float txw, float txh, int col, int row);
+	void UpdateSpriteTexture(float frame_w, float frame_h, float txw, float txh, int col, int row);
+	void UpdateRectPosition();
 	void Draw();//draws shit
 };
