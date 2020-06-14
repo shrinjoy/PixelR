@@ -1,5 +1,5 @@
 # PixelR
-#Intro
+#Intro \n
 **PixelR is a very simple 2D opengl Renderer(I started this project because i wanted to learn opengl)**
 #Features
 1.Camera2D(a 2d camera)
