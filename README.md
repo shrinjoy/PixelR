@@ -6,7 +6,7 @@
 
 ## Features
 
- - .Camera2D(a 2d camera)
+ - Camera2D(a 2d camera)
  - Sprite2D(a sprite game object also supports spritesheet animation)
  - Texture2D(a texture loading class)
  - PixelWindow(a window creation class)
