@@ -7,8 +7,10 @@ C:\PixelRenderer\Libs\Opengl\glad\include\glad\glad.h(498,1): warning C4005: 'GL
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\GL\gl.h(1153): message : see previous definition of 'GL_TEXTURE_COMPONENTS'
 C:\PixelRenderer\Libs\Opengl\glad\include\glad\glad.h(592,1): warning C4005: 'GL_CLIENT_ALL_ATTRIB_BITS': macro redefinition
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\GL\gl.h(973): message : see previous definition of 'GL_CLIENT_ALL_ATTRIB_BITS'
-C:\PixelRenderer\PixelR\PixelR.h(55,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(60,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-C:\PixelRenderer\PixelR\PixelRmain.cpp(61,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\PixelRenderer\PixelR\PixelRmain.cpp(61,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\PixelRenderer\PixelR\PixelR.h(54,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
+C:\PixelRenderer\PixelR\PixelR.h(59,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
+C:\PixelRenderer\PixelR\PixelRmain.cpp(14,32): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\PixelRenderer\PixelR\PixelRmain.cpp(34,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\PixelRenderer\PixelR\PixelRmain.cpp(34,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\PixelRenderer\PixelR\PixelRmain.cpp(34,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   PixelR.vcxproj -> C:\PixelRenderer\PixelR\x64\Debug\PixelR.exe
