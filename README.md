@@ -2,7 +2,7 @@
 
 ## Intro
 
-**PixelR is a very simple 2D opengl Renderer(I started this project because i wanted to learn opengl)**
+**PixelR is a very simple 2D opengl Renderer(I started this project because i wanted to learn opengl so you will have to do some manual stuff read PixelR.h for more info)**
 
 ## Features
 
