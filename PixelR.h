@@ -19,6 +19,8 @@ sprite animation
 //todo
 //sprite batching <--optimization tho i belive this optimization is not really needed but i will add it 
 #pragma once
+#define GLFW_INCLUDE_NONE 
+#define IMGUI_IMPL_OPENGL_LOADER_GLAD
 #include <iostream>
 #include <string>
 #include <GLFW/glfw3.h>
@@ -26,9 +28,13 @@ sprite animation
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
+#include <gtc/random.hpp>
 #include <chrono>
 #include <thread>
 #include <fstream>
+#include "imgui.h"
+#include "imgui_impl_opengl3.h"
+#include "imgui_impl_glfw.h"
 const unsigned int SCREEN_WIDTH = 900;
 const unsigned int SCREEN_HEIGHT = 900;
 const std::string TITLE = "PixelHeros";
@@ -38,6 +44,7 @@ class PixelWindow
 public:
 	GLFWwindow* GameWindow = NULL;
 	bool init_GameWindow(int width, int heigh, std::string title);
+	
 };
 struct Pvector3f
 {
@@ -89,8 +96,8 @@ class Sprite2D
 	unsigned int transformloc;//shader transform variable location mat4 need for scaleing and moving sprite arnd
 	unsigned int colorloc;//shader color variable location vec3 need for color
 	unsigned int txlocc;//shader texture offset mat4 location need for sprite animation
-	glm::mat4 txtran;
-	glm::mat4 trans;
+	glm::mat4 txtran=glm::mat4(1.0f);
+	glm::mat4 trans=glm::mat4(1.0f);
 public:
 	//default values
 	bool dataupdated = true;
