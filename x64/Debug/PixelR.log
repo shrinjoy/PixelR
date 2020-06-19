@@ -1,33 +1,8 @@
-﻿  Camera2D.cpp
+﻿  PixelRmain.cpp
 C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
 C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  PixelRmain.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-C:\PixelRenderer\PixelR\PixelRmain.cpp(16,31): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\PixelRenderer\PixelR\PixelRmain.cpp(46,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\PixelRenderer\PixelR\PixelRmain.cpp(46,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\PixelRenderer\PixelR\PixelRmain.cpp(46,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\PixelRenderer\PixelR\PixelRmain.cpp(54,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\PixelRenderer\PixelR\PixelRmain.cpp(54,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\PixelRenderer\PixelR\PixelRmain.cpp(54,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  PixelWindow.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  Shader.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  Shapes.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  Sprite2D.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  Texture.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  Utility.cpp
-C:\PixelRenderer\PixelR\PixelR.h(79,2): warning C4091: 'static ': ignored on left of 'Utility' when no variable is declared
-C:\PixelRenderer\PixelR\PixelR.h(84,2): warning C4091: 'static ': ignored on left of 'Shader' when no variable is declared
-  Generating Code...
+C:\PixelRenderer\PixelR\PixelRmain.cpp(17,31): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\PixelRenderer\PixelR\PixelRmain.cpp(41,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\PixelRenderer\PixelR\PixelRmain.cpp(41,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\PixelRenderer\PixelR\PixelRmain.cpp(41,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   PixelR.vcxproj -> C:\PixelRenderer\PixelR\x64\Debug\PixelR.exe

@@ -109,3 +109,12 @@ public:
 	void UpdateRectPosition();
 	void Draw();//draws shit
 };
+class PIMGUI
+{
+	
+public:
+	void init(GLFWwindow* window);
+	void begin();
+	void end();
+
+};

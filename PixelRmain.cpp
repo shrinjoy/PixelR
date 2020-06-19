@@ -1,5 +1,6 @@
 #include "PixelR.h"
-
+PIMGUI gui;
+void GUI();
 int main()
 {
 
@@ -20,16 +21,10 @@ int main()
 	Shapes rect;
 	rect.Rect2D();
 	float x = 0.0f;
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& imguio = ImGui::GetIO(); 
 	
-	const char* glsl_version = "#version 150";
+
+	gui.init(pixelGamewindow.GameWindow);
 	
-	ImGui_ImplGlfw_InitForOpenGL(pixelGamewindow.GameWindow, true);
-	ImGui_ImplOpenGL3_Init(glsl_version);
-	
-	//imguio.Fonts->AddFontFromFileTTF("verdana.ttf", 18.0f * highDPIscaleFactor, NULL, NULL);
 	while (!glfwWindowShouldClose(pixelGamewindow.GameWindow))
 	{
 		
@@ -45,17 +40,7 @@ int main()
 		glBindVertexArray(rect.VAO);
 		sprite1.UpdateSpriteTexture(32, 32, testtexture.w, testtexture.h, x, 1);
 		sprite1.Draw();
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-		ImGui::Begin("test");
-		if (ImGui::Button("change color of sprite")) {
-			sprite1.color = {glm::linearRand(-1.0f,1.0f),glm::linearRand(-1.0f,1.0f),0.0f };
-			sprite1.UpdateSpriteTexture(32, 32, testtexture.w, testtexture.h, x, 1);
-		}
-		ImGui::End();
-		ImGui::Render();
-		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+		GUI();
 		glfwSwapBuffers(pixelGamewindow.GameWindow);
 		glfwPollEvents();
 	}
@@ -65,4 +50,10 @@ int main()
 void OnWindowResize(GLFWwindow* window, int width, int height)
 {
 	glViewport(0, 0, width, height);
+}
+void GUI()
+{
+	gui.begin();
+	ImGui::Text("test");
+	gui.end();
 }

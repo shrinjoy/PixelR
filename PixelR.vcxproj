@@ -153,6 +153,7 @@
     <ClCompile Include="..\imgui\imgui_widgets.cpp" />
     <ClCompile Include="..\Libs\Opengl\glad\src\glad.c" />
     <ClCompile Include="Camera2D.cpp" />
+    <ClCompile Include="PIMGUI.cpp" />
     <ClCompile Include="PixelRmain.cpp" />
     <ClCompile Include="PixelWindow.cpp" />
     <ClCompile Include="Shader.cpp" />
